@@ -23,6 +23,11 @@ An enhanced hook bridge for Codex featuring the same architectural loop-guards a
 - **Key Feature**: Prevents agent deadlocks when parsing Codex tool outputs.
 - [View Documentation](./packages/hooks-codex/README.md)
 
+### 3. `@le-temps/dsh-agent-memory` 🆕
+Long-term Core Memory plugin with self-evolution, inspired by MemGPT. Gives your agent persistent cross-session memory.
+- **Key Feature**: 4 memory tools (`append` / `replace` / `delete` / `reflect`) let the agent proactively manage its own knowledge base and evolve over time.
+- [View Documentation](./packages/agent-memory/README.md)
+
 ## 🛠️ Usage
 
 To use any of these plugins in your DeepSeek Harness environment:
