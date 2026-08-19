@@ -1,20 +1,38 @@
 {
   "name": "dsh-plugins-hub",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Community-driven collection of advanced, production-ready plugins for DeepSeek Harness",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-strip-types scripts/test.mjs",
+    "test:vitest": "vitest run",
+    "test:watch": "vitest",
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean",
+    "typecheck": "tsc -b packages/agent-memory packages/token-compactor packages/code-guard packages/hooks-claude-code packages/hooks-codex --noEmit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/le-temps/dsh-plugins-hub.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "ai-agent",
+    "llm-tools"
+  ],
+  "author": "le-temps",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/le-temps/dsh-plugins-hub/issues"
   },
-  "homepage": "https://github.com/le-temps/dsh-plugins-hub#readme"
+  "homepage": "https://github.com/le-temps/dsh-plugins-hub#readme",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0"
+  }
 }

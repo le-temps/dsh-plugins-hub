@@ -1,0 +1,43 @@
+name: 💡 Feature Request
+description: Suggest an idea or feature for existing dsh-plugins.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature to improve the DeepSeek Harness ecosystem!
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Target Plugin
+      description: Select which plugin this feature is for.
+      options:
+        - "@le-temps/dsh-hooks-claude-code"
+        - "@le-temps/dsh-hooks-codex"
+        - "@le-temps/dsh-agent-memory"
+        - "@le-temps/dsh-token-compactor"
+        - "@le-temps/dsh-code-guard"
+        - "New plugin idea (use Plugin Proposal template instead)"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is.
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the Solution You'd Like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe Alternatives Considered
+      description: Any alternative solutions or features you've considered.

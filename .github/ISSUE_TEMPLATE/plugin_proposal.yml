@@ -1,0 +1,37 @@
+name: 🧩 Plugin Proposal (RFC)
+description: Propose a new plugin to be added to dsh-plugins-hub.
+title: "[RFC / Proposal]: "
+labels: ["rfc", "new-plugin", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposing a new plugin for DeepSeek Harness? Please outline your motivation, architecture, and expected user experience below.
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Proposed Package Name
+      description: Recommended format `@le-temps/dsh-<plugin-name>` or `dsh-<plugin-name>`.
+      placeholder: e.g. @le-temps/dsh-mcp-bridge
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation & Use Case
+      description: What specific problem or pain point does this plugin solve for DeepSeek Harness users?
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed Architecture & API Design
+      description: Describe the Cordis services injected (`ctx.tools`, `ctx.systemPrompt`, `ctx.session`, etc.), configuration options, and lifecycle hooks.
+    validations:
+      required: true
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to submit a Pull Request implementing this plugin.

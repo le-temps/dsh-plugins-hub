@@ -1,0 +1,63 @@
+name: 🐛 Bug Report
+description: File a bug report to help us improve dsh-plugins-hub.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Affected Plugin(s)
+      description: Select which plugin is experiencing the issue.
+      options:
+        - "@le-temps/dsh-hooks-claude-code"
+        - "@le-temps/dsh-hooks-codex"
+        - "@le-temps/dsh-agent-memory"
+        - "@le-temps/dsh-token-compactor"
+        - "@le-temps/dsh-code-guard"
+        - "Other / Core Infrastructure"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment Info
+      description: OS version, Node.js version, and DeepSeek Harness version.
+      placeholder: e.g. Node v20.11.0, DeepSeek Harness v0.2.0, Windows 11 / Ubuntu 22.04
+    validations:
+      required: true
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps or `cordis.yml` snippet to reproduce the behavior.
+      placeholder: |
+        1. Mount plugin in `cordis.yml`: ...
+        2. Run `dsh web`
+        3. Trigger tool call ...
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Log Output
+      description: Please copy and paste any relevant terminal or browser console log output.
+      render: shell

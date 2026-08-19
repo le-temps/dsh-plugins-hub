@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/le-temps/dsh-plugins-hub/discussions
+    about: Ask questions, share ideas, and connect with other DeepSeek Harness developers.
+  - name: DeepSeek Harness Official Community
+    url: https://discord.gg/Ycq5dCaS4
+    about: Join the official DeepSeek Harness Discord server.
